@@ -28,7 +28,6 @@ public class CityService {
 		return list.stream().map(x -> new CityDTO(x)).collect(Collectors.toList());		
 	}
 	
-	@Transactional(readOnly=true)
 	public void delete(Long id) {
 		try {
 			repository.deleteById(id);			
